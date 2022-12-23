@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model E_Commerce_Project.Models.Products.Product
+@using E_Commerce_Project.Models.Products
+
+
+
+<Title>@Product.addNewProductTitle</Title>
+<hr />
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+    <table>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Nom du produit</label>
+            </td>
+            <td>
+                <input type="text" asp-for="name" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+
+
+                <label>Prix en euros</label>
+            </td>
+            <td>
+                <input type="number" asp-for="price" />
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Image du product</label>
+            </td>
+            @*<td>
+                <input type="text" asp-for="productDetails.imageLink" />
+            </td>*@
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Résolution de l'appareil'</label>
+            </td>
+            <td>
+                <input type="number" asp-for="productDetails.resolution" />
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Puissance du zoom optic</label>
+            </td>
+            <td>
+                <input type="number" asp-for="productDetails.zoomOptic" />
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Video</label>
+            </td>
+            <td>
+                <input type="number" asp-for="productDetails.video" />
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>Stabilisateur</label>
+            </td>
+            <td>
+                <input type="checkbox" asp-for="productDetails.stabilisator" />
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+
+
+
+                <label>ISO max</label>
+            </td>
+            <td>
+                <input type="number" asp-for="productDetails.isoMax" />
+            </td>
+        </tr>
+
+
+
+
+    </table>
+
+
+
+    <p></p>
+    <div class="form-group">
+        <label asp-for="image.formFile" class="control-label"></label>
+        <input asp-for="image.formFile" accept="image/*" />
+        <span asp-validation-for="image.formFile" class="text-danger" />
+    </div>
+
+
+
+
+
+    <@*select asp-for="sex" asp-items="Html.GetEnumSelectList<E_Commerce_Project.Models.Users.Person.Sex>()">
+              <option selected="selected" value="">Please select your sex</option>
+              </select>*@
+<li>
+        @*<select asp-for="productdetails.productbrand"
+                asp-items="@(new selectlist(@brands.brandslist, nameof(brand.id), nameof(brand.name)))">
+<option>please select a brand</option>
+</select>*@
+<label>Marque de l'appareil</label>
+<select asp-for="productBrandId"
+                    asp-items="ViewBag.IdBrand">
+                    <label>Marque de l'appareil</label>
+                    <option>Please select a Brand</option>
+</select>
+        <select asp-for="productTechnoId"
+                asp-items="ViewBag.IdTechno">
+            <option>Please select a Techno</option>
+        </select>
+        <select asp-for="productTypeId"
+                asp-items="ViewBag.IdType">
+            <option>Please select a Type</option>
+        </select>
+
+</li>
+<div class="form-group">
+<input type="submit" value="Soumettre la saisie" asp-controller="Products" asp-action="AddNewProduct" />
+</div>
+<hr />
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

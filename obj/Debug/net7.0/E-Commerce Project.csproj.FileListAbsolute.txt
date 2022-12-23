@@ -1,0 +1,117 @@
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\appsettings.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.staticwebassets.runtime.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.exe
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.deps.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.runtimeconfig.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.pdb
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.AssemblyReference.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.AssemblyInfoInputs.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.AssemblyInfo.cs
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.CoreCompileInputs.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.RazorAssemblyInfo.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.RazorAssemblyInfo.cs
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.E-Commerce Project.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.build.E-Commerce Project.props
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.E-Commerce Project.props
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.E-Commerce Project.props
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\bundle\E-Commerce Project.styles.css
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\projectbundle\E-Commerce Project.bundle.scp.css
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.CopyComplete
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\refint\E-Commerce Project.dll
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.pdb
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.genruntimeconfig.cache
+C:\Users\FORMATION\source\repos\E-Commerce Project\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\ref\E-Commerce Project.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\appsettings.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.staticwebassets.runtime.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.exe
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.deps.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.runtimeconfig.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\E-Commerce Project.pdb
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.AssemblyReference.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.AssemblyInfoInputs.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.AssemblyInfo.cs
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.CoreCompileInputs.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.RazorAssemblyInfo.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.RazorAssemblyInfo.cs
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.E-Commerce Project.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.build.E-Commerce Project.props
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.E-Commerce Project.props
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.E-Commerce Project.props
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\bundle\E-Commerce Project.styles.css
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\scopedcss\projectbundle\E-Commerce Project.bundle.scp.css
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.csproj.CopyComplete
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\refint\E-Commerce Project.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.pdb
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\E-Commerce Project.genruntimeconfig.cache
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\obj\Debug\net7.0\ref\E-Commerce Project.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\EntityFramework.SqlServer.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\EntityFramework.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\FORMATION\Desktop\E-Commerce Project\E-Commerce Project\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll

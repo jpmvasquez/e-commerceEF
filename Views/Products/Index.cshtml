@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model E_Commerce_Project.Models.Products.Product
+@using E_Commerce_Project.Models.Products
+
+<Title>@Product.addNewProductTitle</Title>
+<hr />
+<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+
+    <label>Nom du produit</label>
+    <input type="text" asp-for="name" />
+    <label>Prix en euros</label>
+    <input type="number" asp-for="price" />
+    @*<label>Image du product</label>
+    <input type="text" asp-for="productDetails.imageLink" />*@
+    <label>Résolution de l'appareil'</label>
+    <input type="number" asp-for="productDetails.resolution" />
+    <label>Puissance du zoom optic</label>
+    <input type="number" asp-for="productDetails.zoomOptic" />
+    <label>Video</label>
+    <input type="number" asp-for="productDetails.video" />
+    <label>Stabilisateur</label>
+    <input type="checkbox" asp-for="productDetails.stabilisator" />
+    <label>ISO max</label>
+    <input type="number" asp-for="productDetails.isoMax" />
+
+    <div class="form-group">
+        <label asp-for="image.formFile" class="control-label"></label>
+        <input asp-for="image.formFile" accept="image/*" />
+        <span asp-validation-for="image.formFile" class="text-danger" />
+    </div>
+    @*<select asp-for="sex" asp-items="Html.GetEnumSelectList<E_Commerce_Project.Models.Users.Person.Sex>()">
+    <option selected="selected" value="">Please select your sex</option>
+    </select>*@
+    <li>
+        @*<select asp-for="productDetails.productBrand"
+        asp-items="@(new SelectList(@Brands.brandsList, nameof(Brand.id), nameof(Brand.name)))">
+        <option>Please select a Brand</option>
+        </select>*@
+        <label>Marque de l'appareil</label>
+        <select asp-for="productBrandId"
+                asp-items="@ViewBag.brandsList">
+            <option>Please select a Brand</option>
+        </select>
+        <select asp-for="productTechnoId"
+                asp-items="@ViewBag.technosList">
+            <option>Please select a Brand</option>
+        </select>
+        <select asp-for="productTypeId"
+                asp-items="@ViewBag.typesList">
+            <option>Please select a Brand</option>
+        </select>
+    </li>
+    <div class="form-group">
+        <input type="submit" value="Soumettre la saisie" asp-controller="Products" asp-action="AddNewProduct" />
+    </div>
+    <hr />
+</form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

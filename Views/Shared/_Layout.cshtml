@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebPhoto</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+
+
+                    <div class="col-2">
+                    <a class="navbar-brand" href="#">Pixel</a>
+                    <img src="~/emg/4.jpg" alt="Logo Pixel" width=50% />
+                    </div>
+                    
+                    <div class="col-1">
+                    
+                    </div>
+                <div class="col-1"> </div>
+
+                <div class="col-5">
+                    <form class="d-flex"  asp-controller="Home" asp-action="Filter">
+                        
+                          
+                            
+                                        <input name="searchString"  type="search" placeholder="Search for a camera..." aria-label="Search">
+                        <button class="btn btn-outline-dark " type="submit">Search</button>
+                                  
+                           @* <input name="searchString" type="search" placeholder="Search for a camera..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-dark btn-sm mb-2" type="submit">OK</button>*@
+                            
+                           
+                        
+                    </form>
+                    </div>
+                    
+                        
+                    <div class="col-2">
+
+                    <a class="btn btn-dark" href="#" role="button">Connextion</a>
+                    
+                    <a class="btn btn-dark" href="#" role="button">Contact</a>
+                </div>
+
+                <div class="col-2">
+                @*<img src="~/emg/panierr.png" alt="Logo Pixel" width=20% />*@
+                    @*<button type="button" class="btn btn-dark position-relative" >
+                        Panier
+                        <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
+                            <span class="visually-hidden">Panier</span>
+                        </span>
+                    </button>*@
+                    @await Component.InvokeAsync("ShoppingBasket")
+                </div>
+
+                
+                   
+                </div>
+
+           
+        </nav>
+        
+       
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(@Url.Content($"~/emg/3.jpg"))" ata-bs-interval="500">
+                        <div class="carousel-caption">
+                            <h5>jusqu'à 20% de réduction sur nos reflex!</h5>
+                            <p> La photographie est une brève complicité entre la prévoyance et le hasard.</p>
+                        </div>
+                    </div>
+                <div class="carousel-item" style="background-image: url(@Url.Content($"~/emg/2.jpg"))">
+                        <div class="carousel-caption">
+                        <h5>Découvrez nos appareils photo numériques</h5>
+                        <p>Ce que la photo reproduit à l'infini n'a lieu qu'une fois.</p>
+                        </div>
+                    </div>
+                <div class="carousel-item" style="background-image: url(@Url.Content($"~/emg/1.jpg"))">
+                        <div class="carousel-caption">
+                            <h5>Découvrez note gamme pro!</h5>
+                            <p>Capturez les meilleurs moments avec les appareils hautes gamme.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </header>
+ 
+       
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+       @* <div class="container">
+            &copy; 2022 - WebApplication2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>*@
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

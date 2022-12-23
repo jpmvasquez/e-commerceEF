@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using E_Commerce_Project.Models.Products
+@model IEnumerable<Product>
+
+
+<body>
+    <p></p>
+    <div class="parent">
+        <div class="div1">
+            <img class="ali" src="~/emg/Ph.jpg" alt="Logo Pixel" width=50% />
+            <div class="div1">
+                <p></p>
+                <div class="list-group">
+                    
+
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Appareil photo Reflex</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Appareil photo Hybride</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Appareil photo Bridge</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Appareil photo Compact</a>
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-light">Appareil photo Instantané</a>
+              </div>
+            </div>
+
+        </div>
+        <div class="div2">
+            Appareil photo hybride plein format + objectif Sony 28–70 mm
+            F3.5 – 5.6 (33 mégapixels, mise au point automatique en temps réel,
+            10 images/s, 4K 60p, écran tactile à angle variable
+            <p></p>
+
+            <div class="row">
+    @foreach (Product product in Model)
+    {
+        <div class="col-md-3 col-xs-3 border-1 mb-3">
+            <div class="card mb-3" style="max-width: 400px;">
+                <div class="row g-2">
+                    <div class="col-md-12">
+                        <div class="card-header text-white-50 bg-body">
+                            <p class="card-text">
+                                <h7 class="card-title">
+                                    Appareil Photo @product.productBrand.name @product.name
+                                </h7>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@Url.Content($"~/Content/{product.image.name}")" width="100%">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-">@product.price euros</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                            <a class="btn btn-outline-dark float-right" asp-action="Details" asp-route-id="@product.id">
+                                    <i class="bi bi-eye-fill"></i> Details
+                                </a>
+                                            <a href="@Url.Action("AddProductBasket", "Home", new { productId = @product.id},null)" class="btn btn-outline-dark float-right">
+                                    <i class="bi bi-eye-fill"></i> +Panier
+                                                
+                                
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</body>

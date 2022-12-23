@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using E_Commerce_Project.Models.Products
+@model IEnumerable<Product>
+<div>
+    <img src="raw.jpg" alt="Logo HubSpot" width=100% height=200px />
+
+</div>
+<div class="container">
+
+    <header>
+        | Accueil |  Espace client  |  Nous contacter  |
+
+    </header>
+
+    <article>
+        <h1>Découvrez nos caméras !</h1>
+        <p> | Reflex | Son, images, vidéos | Caméra publicitaire</p>
+        <p>
+            Nikon D850, le meilleur reflex plein format (24x36) Nikon D850. ...
+            Nikon D7500, le meilleur reflex à capteur APS-C. Nikon D7500. ...
+            Canon EOS 250D, le reflex APS-C au meilleur rapport qualité/prix. Canon EOS 250D.
+        </p>
+
+        <p>
+            ontes, nascetur ridiculus mus.
+        </p>
+    </article>
+    <aside>
+        <h2>Type d'appareils...</h2>
+        <ul>
+            <li>Reflex</li>
+            <li>Hybride</li>
+            <li>Bridge</li>
+            <li>Compact</li>
+            <li>Compact expert</li>
+            <li>Instantané</li>
+        </ul>
+
+    </aside>
+    <footer>Contact me@mysite.com</footer>
+</div>
+
+
+<div class="row">
+    @foreach (Product product in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-primary mb-3">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-header text-white bg-info">
+                            <p class="card-text">
+                                <h5 class="card-title">
+                                    Appareil Photo @product.productBrand.name @product.name
+                                </h5>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="@Url.Content($"~/Content/{product.image.name}")" width="100%">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-">@product.price euros</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-footer ">
+                            <p class="card-text">
+                                <a class="btn btn-outline-primary float-right" asp-action="Details" asp-route-id="@product.id">
+                                    <i class="bi bi-eye-fill"></i> Show Details
+                                </a>
+                                <a href="@Url.Action("AddProductBasket", "Home", new { productId = @product.id},null)" class="btn btn-outline-primary float-right">
+                                    <i class="bi bi-eye-fill"></i> Add to basket
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

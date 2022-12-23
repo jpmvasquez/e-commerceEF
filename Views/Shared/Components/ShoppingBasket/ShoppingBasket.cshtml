@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*
+    Liste des articles sélectionnés
+    img nom avec marque qté prix
+*@
+@using E_Commerce_Project.Models.Products;
+@model IEnumerable<Product>;
+@{
+    double total = 0;
+    foreach (Product product in Model)
+    {
+        total += product.totalPrice;
+    }
+}
+@if(Model.Count() == 0)
+{
+<button type="button" class="btn btn-dark position-relative">
+    Panier
+    <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
+        0
+        <span class="visually-hidden">Panier</span>
+    </span>
+</button>
+<ul>
+    <li>
+        Auncun product sélectionné
+    </li>
+</ul>
+}
+else
+{
+    <button type="button" class="btn btn-dark position-relative">
+        Panier
+        <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
+            @Model.Count()
+            <span class="visually-hidden">Panier</span>
+        </span>
+    </button>
+    <ul>
+        @foreach(Product product in Model)
+        {
+        <li>
+                @product.productBrand.name @product.name @product.qtyOrdered @product.totalPrice
+        </li>
+        }
+        <li>Total: @total euros</li>
+        <button>Passer à la caisse</button>
+    </ul>
+}
