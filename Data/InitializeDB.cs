@@ -1,11 +1,11 @@
-﻿using E_Commerce_Project.Models.Users;
-using static E_Commerce_Project.Models.Users.Person;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using System.Net;
 using System.Diagnostics.Metrics;
 using System.Reflection.Emit;
 using E_Commerce_Project.Models.Products;
 using Microsoft.EntityFrameworkCore;
+using E_Commerce_Project.Models.Users;
+using Microsoft.AspNetCore.Identity;
 
 namespace E_Commerce_Project.Data
 {
@@ -130,31 +130,8 @@ namespace E_Commerce_Project.Data
             //    var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
             //    context.Database.EnsureCreated();
-            modelBuilder.Entity<Address>().HasData(
-                new Address()
-                {
-                    id = 1,
-                    streetNumber = "21",
-                    streetName = "rue de la Boétie",
-                    city = "Paris",
-                    zipCode = "75011",
-                    country = "France",
-                });
-            modelBuilder.Entity<Person>().HasData(
-                new Person()
-                {
-                    id = 1,
-                    firstName = "JP",
-                    lastName = "M",
-                    addressId = 1,
-                    role = Person.eRole.Admin,
-                    emailAddress = "jepim84@yahoo.fr",
-                    civility = Person.eCivility.Monsieur,
-                    password = "toto"
-                });
-
             modelBuilder.Entity<Brand>().HasData(new List<Brand>()
-                    {
+            {
                         new Brand()
                         {
                             id = 1,
@@ -171,22 +148,22 @@ namespace E_Commerce_Project.Data
                             name = "Panasonic"
                         },
                         new Brand()
-                        {   
+                        {
                             id = 4,
                             name = "Nikon"
                         },
                         new Brand()
-                        {   
+                        {
                             id = 5,
                             name = "Olympus"
                         },
                         new Brand()
-                        {   
+                        {
                             id = 6,
                             name = "Fujifilm"
                         },
                         new Brand()
-                        {   
+                        {
                             id = 7,
                             name = "Canon"
                         }
@@ -200,12 +177,12 @@ namespace E_Commerce_Project.Data
                             name = "Numérique"
                         },
                         new Techno()
-                        {   
+                        {
                             id = 2,
                             name = "Argentique"
                         },
                         new Techno()
-                        {   
+                        {
                             id = 3,
                             name = "Instantanée"
                         },
@@ -216,7 +193,7 @@ namespace E_Commerce_Project.Data
                         }
                     });
 
-                modelBuilder.Entity<ProductType>().HasData(new List<ProductType>()
+            modelBuilder.Entity<ProductType>().HasData(new List<ProductType>()
                     {
                         new ProductType()
                         {
@@ -239,6 +216,54 @@ namespace E_Commerce_Project.Data
                             name = "Compact"
                         }
                     });
+
+            modelBuilder.Entity<Address>().HasData(new List<Address>()
+            {
+                new Address()
+                {
+                    id = 1,
+                    streetNumber = "12",
+                    streetName = "rue de pie",
+                    city = "Paris",
+                    zipCode = "75020",
+                    country = "France"
+                }
+            });
+        }
+
+        public static async Task SeedUsersAndRolesAsync(IApplicationBuilder applicationBuilder)
+        {
+            using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+            {
+
+                //Roles
+                var roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                if (!await roleManager.RoleExistsAsync(UserRoles.User))
+                    await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+
+                //Admin User with Address
+                var userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+                string adminUserEmail = "jepim84@yahoo.fr";
+
+                var adminUser = await userManager.FindByEmailAsync(adminUserEmail);
+                if (adminUser == null)
+                {
+                    var newAdminUser = new ApplicationUser()
+                    {
+                        addressId = 1,
+                        firstName = "Admin",
+                        lastName = "User",
+                        UserName = "admin-user",
+                        Email = adminUserEmail,
+                        EmailConfirmed = true
+                    };
+                    await userManager.CreateAsync(newAdminUser, "Coding@1234?");
+                    await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
+                }
+            }
         }
     }
 }

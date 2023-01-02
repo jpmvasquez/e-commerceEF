@@ -7,16 +7,12 @@
     Liste des articles sélectionnés
     img nom avec marque qté prix
 *@
-@using E_Commerce_Project.Models.Products;
-@model IEnumerable<Product>;
-@{
-    double total = 0;
-    foreach (Product product in Model)
-    {
-        total += product.totalPrice;
-    }
-}
-@if(Model.Count() == 0)
+@using E_Commerce_Project.Data.ViewModels;
+@model ShoppingBasketVM;
+@*@{
+    ViewData["shoppingBasketVM"] = Model;
+}*@
+@if (Model == null || Model.shoppingBasketSummary == null || Model.shoppingBasketSummary.shoppingBasketItems.Count() == 0)
 {
 <button type="button" class="btn btn-dark position-relative">
     Panier
@@ -36,18 +32,22 @@ else
     <button type="button" class="btn btn-dark position-relative">
         Panier
         <span class="position-absolute top-0 start-80 translate-middle badge rounded-pill bg-danger">
-            @Model.Count()
+            @Model.shoppingBasketSummary.shoppingBasketItems.Count()
             <span class="visually-hidden">Panier</span>
         </span>
     </button>
-    <ul>
-        @foreach(Product product in Model)
-        {
-        <li>
-                @product.productBrand.name @product.name @product.qtyOrdered @product.totalPrice
-        </li>
-        }
-        <li>Total: @total euros</li>
-        <button>Passer à la caisse</button>
-    </ul>
+    <form asp-controller="Command" asp-action="ShoppingBasket" enctype="multipart/form-data">
+        <ul>
+            @foreach(ShoppingBasketItem shoppingBasketItem in Model.shoppingBasketSummary.shoppingBasketItems)
+            {
+                <li>
+                    <input asp-for="@shoppingBasketItem.product.name" class="form-control" readonly/>
+                    @shoppingBasketItem.product.productBrand.name @shoppingBasketItem.product.name @shoppingBasketItem.qtyOrdered @shoppingBasketItem.subTotal
+                </li>
+            }
+            <li>Total: @Model.totalPrice euros</li>
+            <input type="submit" value="Achat" class="btn btn-primary" />
+            <button>Achat</button>
+        </ul>
+    </form>
 }

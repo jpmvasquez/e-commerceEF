@@ -27,10 +27,10 @@
 
         </div>
         <div class="div2">
-            Appareil photo hybride plein format + objectif Sony 28–70 mm
-            F3.5 – 5.6 (33 mégapixels, mise au point automatique en temps réel,
-            10 images/s, 4K 60p, écran tactile à angle variable
-            <p></p>
+            <form class="d-flex" method="post"  asp-controller="Home" asp-action="Filter">
+                        <input name="searchString" type="search">
+                        <button class="btn btn-outline-dark " type="submit">Search</button>
+                    </form>
 
             <div class="row">
     @foreach (Product product in Model)
@@ -61,7 +61,7 @@
                                             <a class="btn btn-outline-dark float-right" asp-action="Details" asp-route-id="@product.id">
                                     <i class="bi bi-eye-fill"></i> Details
                                 </a>
-                                            <a href="@Url.Action("AddProductBasket", "Home", new { productId = @product.id},null)" class="btn btn-outline-dark float-right">
+                                            <a href="@Url.Action("AddProductToBasket", "Home", new { productId = @product.id},null)" class="btn btn-outline-dark float-right">
                                     <i class="bi bi-eye-fill"></i> +Panier
                                                 
                                 

@@ -11,19 +11,26 @@ namespace E_Commerce_Project.Controllers
     public class ProductsController : Controller
     {
         private readonly AppDbContext _context;
+        public IWebHostEnvironment _hostEnvironment;
+        public static List<SelectListItem> brandsList;
 
         public ProductsController(AppDbContext context)
         {
             _context = context;
         }
 
-        public IWebHostEnvironment _hostEnvironment;
-        public static List<SelectListItem> brandsList;
+        
         public async Task<IActionResult> IndexAsync()
         {
             //brandsList = _context.Brand.ToListAsync();
             //ViewData.Add("brandsList", brandsList);
             //ViewBag.brandsList = brandsList;
+            ViewData["IdBrand"] = new SelectList(
+                _context.Brand, "id", "name");
+            ViewData["IdTechno"] = new SelectList(
+                _context.Techno, "id", "name");
+            ViewData["IdType"] = new SelectList(
+                _context.ProductType, "id", "name");
             return View();
         }
 
@@ -79,6 +86,15 @@ namespace E_Commerce_Project.Controllers
             return View(@product);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Index(Product product, [FromServices] IWebHostEnvironment _hostEnvironment)
+        {
+            //string wwwRootPath = _hostEnvironment.WebRootPath;
+            //Helper.addNewProductToDb(product, _hostEnvironment);
+            //Product? product;
+            return View("Home/Index");
+        }
         //[HttpPost]
         //public IActionResult Index(Product product, [FromServices] IWebHostEnvironment _hostEnvironment)
         //{

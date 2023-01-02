@@ -1,0 +1,27 @@
+﻿using E_Commerce_Project.Models.Products;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace E_Commerce_Project.Models.Commands
+{
+    public class OrderItem
+    {
+        [Key]
+        public int id { get; set; }
+
+        public int qty { get; set; }
+        public double price { get; set; }
+
+        public int productId { get; set; }
+        [ForeignKey("productId")]
+        public Product product { get; set; }
+
+        public int orderId { get; set; }
+        [ForeignKey("orderId")]
+        public Order order { get; set; }
+    }
+}

@@ -1,10 +1,12 @@
 ﻿using E_Commerce_Project.Models.Products;
 using E_Commerce_Project.Models.Users;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace E_Commerce_Project.Data
 {
-    public class AppDbContext: DbContext
+    //public class AppDbContext: DbContext
+    public class AppDbContext: IdentityDbContext<ApplicationUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -13,6 +15,7 @@ namespace E_Commerce_Project.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             InitializeDB.seed(modelBuilder);
+            //InitializeDB.SeedUsersAndRolesAsync().Wait();
             base.OnModelCreating(modelBuilder);
         }
 
@@ -23,8 +26,6 @@ namespace E_Commerce_Project.Data
         public DbSet<ProductDetails> ProductDetails { get; set; }
         public DbSet<Product> Product { get; set; }
 
-        //public DbSet<Address> Address { get; set; }
-        //public DbSet<Person> Person { get; set; }
-
+        public DbSet<Address> Address { get; set; }
     }
 }

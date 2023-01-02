@@ -8,21 +8,20 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace ECommerceProject.Migrations
+namespace E_Commerce_Project.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221223104911_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20221227141222_Initialize")]
+    partial class Initialize
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.1")
+                .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("E_Commerce_Project.Models.Products.Brand", b =>
                 {
@@ -30,7 +29,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -84,7 +83,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -105,7 +104,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<int>("imageId")
                         .HasColumnType("int");
@@ -150,7 +149,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<int>("isoMax")
                         .HasColumnType("int");
@@ -180,7 +179,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(max)");
@@ -222,7 +221,7 @@ namespace ECommerceProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(max)");
@@ -255,108 +254,6 @@ namespace ECommerceProject.Migrations
                         {
                             id = 4,
                             name = "Jetable"
-                        });
-                });
-
-            modelBuilder.Entity("E_Commerce_Project.Models.Users.Address", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("city")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("country")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("streetName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("streetNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<string>("zipCode")
-                        .IsRequired()
-                        .HasMaxLength(5)
-                        .HasColumnType("nvarchar(5)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Address");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            city = "Paris",
-                            country = "France",
-                            streetName = "rue de la Boétie",
-                            streetNumber = "21",
-                            zipCode = "75011"
-                        });
-                });
-
-            modelBuilder.Entity("E_Commerce_Project.Models.Users.Person", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<int>("addressId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("civility")
-                        .HasColumnType("int");
-
-                    b.Property<string>("emailAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("firstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("lastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("role")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("addressId");
-
-                    b.ToTable("Person");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            addressId = 1,
-                            civility = 0,
-                            emailAddress = "jepim84@yahoo.fr",
-                            firstName = "JP",
-                            lastName = "M",
-                            password = "toto",
-                            role = 0
                         });
                 });
 
@@ -401,17 +298,6 @@ namespace ECommerceProject.Migrations
                     b.Navigation("productTechno");
 
                     b.Navigation("productType");
-                });
-
-            modelBuilder.Entity("E_Commerce_Project.Models.Users.Person", b =>
-                {
-                    b.HasOne("E_Commerce_Project.Models.Users.Address", "address")
-                        .WithMany()
-                        .HasForeignKey("addressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("address");
                 });
 #pragma warning restore 612, 618
         }

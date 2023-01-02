@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace E_Commerce_Project.Data.ViewModels
 {
     public class LoginVM
     {
-        [Display(Name = "Adresse Email")]
-        [Required(ErrorMessage = "L'adresse Email est obligatoire")]
-        public string emailAddress { get; set; }
+        [Display(Name = "Adresse email")]
+        [Required(ErrorMessage = "L'adress email est obligatoire")]
+        public string EmailAddress { get; set; }
 
-        [Required(ErrorMessage = "Le mdp est obligatoire")]
+        [Required]
         [DataType(DataType.Password)]
-        public string password { get; set; }
+        public string Password { get; set; }
     }
 }

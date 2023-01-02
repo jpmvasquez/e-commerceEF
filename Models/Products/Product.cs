@@ -12,7 +12,7 @@ public class Product
     public string name { get; set; } = string.Empty;
     [Display(Name = "Prix")]
     [Required(ErrorMessage = "Le prix est obligatoire")]
-    public double price { get; set; }
+    public string price { get; set; }
     public int productDetailsId { get; set; }
     [ForeignKey("productDetailsId")]
     public ProductDetails productDetails { get; set; }
@@ -20,12 +20,13 @@ public class Product
     public int imageId { get; set; }
     [ForeignKey("imageId")]
     public Image image { get; set; }
+
     [NotMapped]
     public int remainingQty { get; set; }
-    [NotMapped]
-    public int qtyOrdered { get; set; } = 0;
-    [NotMapped]
-    public double totalPrice => qtyOrdered * price;
+    //[NotMapped]
+    //public int qtyOrdered { get; set; } = 0;
+    //[NotMapped]
+    //public decimal totalPrice => (decimal)qtyOrdered * decimal.Parse(price);
 
     public int productTypeId { get; set; }
     [ForeignKey("productTypeId")]
@@ -39,7 +40,7 @@ public class Product
     [ForeignKey("productBrandId")]
     public Brand productBrand { get; set; }
 
-    public Product(int id, string name, double price, ProductDetails productDetails, 
+    public Product(int id, string name, string price, ProductDetails productDetails, 
         Image image, ProductType productType, Techno productTechno, Brand productBrand)
     {
         this.id = id;
@@ -52,7 +53,7 @@ public class Product
         this.productBrand = productBrand;
         //this.addNewProductTitle = "addNewProductTitle";
     }
-    public Product(string name, double price, ProductDetails productDetails, 
+    public Product(string name, string price, ProductDetails productDetails, 
         Image image, ProductType productType, Techno productTechno, Brand productBrand)
     {
         this.name = name;

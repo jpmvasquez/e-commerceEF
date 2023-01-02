@@ -7,22 +7,21 @@ namespace E_Commerce_Project.Models.Products
     {
         public int id { get; set; } 
         public string name { get; set; }
-        public string title { get; set; }
+        [Display(Name = "Mettez l'image du produit")]
+        [Required(ErrorMessage = "L'image du produit est obligatoire")]
         [NotMapped]
-        public virtual IFormFile formFile { get; set; }
+        public IFormFile formFile { get; set; }
         
         public Image(){ }
-        public Image(int id, string name, string title, IFormFile formFile)
+        public Image(int id, string name, IFormFile formFile)
         {
             this.id = id;
             this.name = name;
-            this.title = title;
             this.formFile = formFile;
         }
-        public Image(string name, string title, IFormFile formFile)
+        public Image(string name, IFormFile formFile)
         {
             this.name = name;
-            this.title = title;
             this.formFile = formFile;
         }
     }
