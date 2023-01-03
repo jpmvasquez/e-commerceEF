@@ -78,7 +78,7 @@ namespace E_Commerce_Project.Controllers
                 firstName = registerVM.firstName,
                 lastName = registerVM.lastName,
                 Email = registerVM.EmailAddress,
-                UserName = registerVM.EmailAddress,
+                UserName = registerVM.fullName,
                 addressId = address.id,
                 civility = registerVM.civility
             };
@@ -100,11 +100,6 @@ namespace E_Commerce_Project.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
-        }
-
-        public IActionResult AccessDenied(string ReturnUrl)
-        {
-            return View();
         }
     }
 }

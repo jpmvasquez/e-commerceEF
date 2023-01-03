@@ -260,7 +260,7 @@ namespace E_Commerce_Project.Data
                         Email = adminUserEmail,
                         EmailConfirmed = true
                     };
-                    await userManager.CreateAsync(newAdminUser, "Coding@1234?");
+                    await userManager.CreateAsync(newAdminUser, "Azerty1_");
                     await userManager.AddToRoleAsync(newAdminUser, UserRoles.Admin);
                 }
             }
