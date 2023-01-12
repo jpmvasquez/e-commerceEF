@@ -55,9 +55,18 @@
 
         <div class="text-right">
             <div class="btn-group">
-                <a class="btn btn-outline-primary" asp-action="CompleteOrder">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-outline-primary" asp-controller="Command" asp-action="CompleteOrder">
                         Terminer la commande
-                </a>
+                    </a>
+                }
+                else if (!User.Identity.IsAuthenticated)
+                {
+                        <a class="btn btn-outline-primary" asp-controller="User" asp-action="Login">
+                            Connecter vous
+                        </a>
+                }
                 <span style="padding:5px"></span>
                 <a class="btn btn-outline-success" asp-controller="Home" asp-action="Index">
                     Ajouter d'autres produits

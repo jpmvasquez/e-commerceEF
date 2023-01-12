@@ -21,6 +21,29 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 });
 builder.Services.AddControllersWithViews();
+//builder.Services.Configure<IdentityOptions>(options =>
+//{
+//    // Paswoord instellingen
+//    options.Password.RequireDigit = true;
+//    options.Password.RequireLowercase = true;
+//    options.Password.RequireNonAlphanumeric = true;
+//    options.Password.RequireUppercase = true;
+//    options.Password.RequiredLength = 6;
+//    options.Password.RequiredUniqueChars = 1;
+
+//    // Gebruiker instellingen
+//    options.User.RequireUniqueEmail = true;
+//    options.User.AllowedUserNameCharacters =
+//      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "; // here is the issue
+
+    // Lockout instellingen
+    //options.Lockout = new LockoutOptions
+    //{
+    //    AllowedForNewUsers = true,
+    //    DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5),
+    //    MaxFailedAccessAttempts = 5
+    //};
+//});
 
 var app = builder.Build();
 

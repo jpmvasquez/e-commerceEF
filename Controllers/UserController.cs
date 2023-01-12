@@ -79,9 +79,13 @@ namespace E_Commerce_Project.Controllers
                 lastName = registerVM.lastName,
                 Email = registerVM.EmailAddress,
                 UserName = registerVM.fullName,
-                addressId = address.id,
+                //addressId = registerVM.addressId,
+                //UserName = registerVM.fullName,
                 civility = registerVM.civility
+                //password = registerVM.Password
             };
+            //_context.Users.Add(newUser);
+            //await _context.SaveChangesAsync();
             var newUserResponse = await _userManager.CreateAsync(newUser, registerVM.Password);
 
             if (newUserResponse.Succeeded)

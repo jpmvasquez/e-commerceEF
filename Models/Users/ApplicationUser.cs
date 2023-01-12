@@ -26,11 +26,11 @@ namespace E_Commerce_Project.Models.Users
         [Display(Name = "Nom de famille")]
         public string lastName { get; set; }
         public string fullName => firstName + " " + lastName;
-        [Required]
-        public int addressId { get; set; }
-        [ForeignKey("addressId")]
-        [NotMapped]
-        public Address address { get; set; }
+        //[Required]
+        //public int addressId { get; set; }
+        //[ForeignKey("addressId")]
+        //[NotMapped]
+        //public Address address { get; set; }
 
         public ApplicationUser() { }
     }

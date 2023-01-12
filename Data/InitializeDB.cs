@@ -253,7 +253,7 @@ namespace E_Commerce_Project.Data
                 {
                     var newAdminUser = new ApplicationUser()
                     {
-                        addressId = 1,
+                        //addressId = 1,
                         firstName = "Admin",
                         lastName = "User",
                         UserName = "admin-user",

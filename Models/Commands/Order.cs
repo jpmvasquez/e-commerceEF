@@ -17,7 +17,7 @@ namespace E_Commerce_Project.Models.Commands
         [ForeignKey(nameof(userId))]
         public ApplicationUser user { get; set; }
 
-        public List<OrderItem> orderItems { get; set; }
+        public List<OrderDetails> orderItems { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime orderDate { get; set; }

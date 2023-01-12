@@ -3,9 +3,13 @@ using E_Commerce_Project.Data.ViewModels;
 using E_Commerce_Project.Models.Products;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using E_Commerce_Project.Models.Commands;
+using Microsoft.AspNetCore.Authorization;
 
 namespace E_Commerce_Project.Controllers
 {
+    //[Authorize]
     public class CommandController : Controller
     {
         private readonly AppDbContext _context;
@@ -27,6 +31,28 @@ namespace E_Commerce_Project.Controllers
                 .Include(p => p.productTechno)
                 .Include(p => p.productType)
                 .ToList();
+        }
+
+        public IActionResult CompleteOrder()
+        {
+            List<OrderDetails> orderDetails = new List<OrderDetails>();
+            foreach (ShoppingBasketItem shoppingBasketItem in _shoppingBasketSummary.shoppingBasketItems)
+                orderDetails.Add(new OrderDetails()
+                {
+                    qty = shoppingBasketItem.qtyOrdered,
+                    price = shoppingBasketItem.subTotal,
+                    product = shoppingBasketItem.product,
+                });
+            return View("Order", orderDetails);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CompleteOrder(Order order)
+        {
+            string userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            return View("Order", order);
         }
 
         public IActionResult Index()

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Project.Models.Commands
 {
-    public class OrderItem
+    public class OrderDetails
     {
         [Key]
         public int id { get; set; }
 
         public int qty { get; set; }
-        public double price { get; set; }
+        public decimal price { get; set; }
 
         public int productId { get; set; }
         [ForeignKey("productId")]
